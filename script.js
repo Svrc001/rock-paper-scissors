@@ -44,4 +44,28 @@ function playRound(humanChoice, computerChoice) {
 
 }
 
+function playGame() {
+
+    for(let i=0; i<5; i++) {
+
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+        
+        playRound(humanChoice, computerChoice);
+    }
+
+    if(humanScore > computerScore) {
+        console.log(`You won against the Computer with scores ${humanScore} and ${computerScore} respectively`);
+    }
+    else if(humanScore < computerScore) {
+        console.log(`You lost against the Computer with scores ${humanScore} and ${computerScore} respectively`);
+    }
+    else {
+        console.log(`Its a tie with scores ${humanScore} and ${computerScore} respectively`);
+    }
+
+}
+
+playGame();
+
 
